@@ -1,0 +1,16 @@
+How to do git stash.
+
+Run "git log" and pick the one of the hash
+git rebase -i <hash>
+Retain "Pick" you want to keep
+Mark "f" to purge the following commits
+git push origin +master
+
+
+How to do multiple PR
+1. git clone <repo> - by default this will be your master branch
+2. Create a new branch- "git checkout br2" - br2 is my new branch name
+3. do your work. commit, "git commit -m 'comments'"
+4. Push - git push origin/br2
+5. To go back to master branch, do "git checkout master"
+6. From master, to go back to br2, run "git checkout br2"
