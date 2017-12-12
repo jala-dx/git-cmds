@@ -57,7 +57,7 @@ Switched to a new branch 'pr/999'
 
 
 #### How to add remote upstream
-
+```
 git clone https://cto-github.cisco.com/jganapat/learn-go.git
 
 git remote -v
@@ -67,7 +67,41 @@ git fetch upstream
 git status
 git rebase upstream/master
 
+if you hit merge conflicts
+git reset --hard upstream/master
+
+
 g st
-g commit -m "comments.."
+g commit -s -m "comments.."
 git add
 g push origin master
+
+```
+
+
+```
+814  rm -rf atomix
+  815  git clone https://cto-github.cisco.com/jganapat/atomix.git
+  816  cd atomix
+  817  git remote add upstream https://cto-github.cisco.com/atom/atomix.git
+  818  git log
+  819  git fetch upstream
+  820  git branch
+  821  git checkout master
+  822  git merge upstream/master
+  823  vi releases/apic-v1.txt 
+  824  git log
+  825  git reset --hard upstream/master
+  826  git log
+  827  git push origin +master
+  828  git log
+  829  vi releases/apic-v1.txt 
+  830  git status -uno
+  831  git add releases/apic-v1.txt 
+  832  git commit -s -m 'enable elastic auto-start after boot'
+  833  git log
+  834  git push origin +master
+  835  git log
+
+
+```
