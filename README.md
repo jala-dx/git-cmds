@@ -79,6 +79,12 @@ g push origin master
 ```
 
 
+#### Another way to update your fork to parent
+https://stackoverflow.com/questions/10773518/merge-conflicts-updating-from-upstream
+https://help.github.com/articles/syncing-a-fork/
+
+
+
 ```
 814  rm -rf atomix
   815  git clone https://cto-github.cisco.com/jganapat/atomix.git
@@ -105,3 +111,24 @@ g push origin master
 
 
 ```
+
+#### How to remove a last commit
+https://sethrobertson.github.io/GitFixUm/fixup.html
+git reset --hard HEAD^
+
+```
+  800  rm -rf atomix
+  801  git clone https://cto-github.cisco.com/jganapat/atomix.git
+  802  cd atomix
+  803  git remote add upstream https://cto-github.cisco.com/atom/atomix.git
+  804  git remote -v
+  805  git log
+  806  git reset --hard HEAD^
+  807  git log
+  808  git status -uno
+  809  git push origin master
+  810  git log
+  811  git push origin +master
+  812  git log
+  ```
+  
