@@ -131,4 +131,24 @@ git reset --hard HEAD^
   811  git push origin +master
   812  git log
   ```
-  
+  ```
+  how to upload something into our artifactory
+  ~/go/centos>curl -u atom-docker-deployer:4w08j34pivprn8cn -X PUT "http://engci-maven-master.cisco.com/artifactory/atom-release/elastic/elasticsearch-5.6.4.rpm" --ftp-create-dirs -T elasticsearch-5.6.4.rpm
+{
+  "repo" : "atom-release",
+  "path" : "/elastic/elasticsearch-5.6.4.rpm",
+  "created" : "2018-01-23T14:37:14.103-08:00",
+  "createdBy" : "atom-docker-deployer",
+  "downloadUri" : "http://engci-maven.cisco.com/artifactory/atom-release/elastic/elasticsearch-5.6.4.rpm",
+  "mimeType" : "application/x-rpm",
+  "size" : "33689931",
+  "checksums" : {
+    "sha1" : "9491f1b2aff9077c03fca76ff729846c87f0f599",
+    "md5" : "6a17be16006af1731b3adda316d52f3c"
+  },
+  "originalChecksums" : {
+  },
+  "uri" : "http://engci-maven.cisco.com/artifactory/atom-release/elastic/elasticsearch-5.6.4.rpm"
+}~/go/centos>
+```
+
