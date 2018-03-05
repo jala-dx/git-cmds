@@ -169,3 +169,41 @@ root@j7:~/atomix-hostcert/atomix/ocibuilds/es#
 
 ```
 
+/local/dme/tools/kron - Makefile is present here
+
+[root@dev-infra4-ifc1 jalaja]# docker pull dockerhub.cisco.com/atom-docker/jalaja/elastic:0.1.8
+Trying to pull repository dockerhub.cisco.com/atom-docker/jalaja/elastic ...
+sha256:e24cbddfb4f15a8a150a2f0e231cc5f2b8be55b3c801c217c1bcb4ff256b9f64: Pulling from dockerhub.cisco.com/atom-docker/jalaja/elastic
+d9aaf4d82f24: Pull complete
+33d89168d60d: Pull complete
+52169ba72e4a: Pull complete
+7c148f3837a8: Pull complete
+Digest: sha256:e24cbddfb4f15a8a150a2f0e231cc5f2b8be55b3c801c217c1bcb4ff256b9f64
+Status: Downloaded newer image for dockerhub.cisco.com/atom-docker/jalaja/elastic:0.1.8
+[root@dev-infra4-ifc1 jalaja]# docker save elastic-0.1.8.tar dockerhub.cisco.com/atom-docker/jalaja/elastic:0.1.8
+Cowardly refusing to save to a terminal. Use the -o flag or redirect.
+[root@dev-infra4-ifc1 jalaja]# docker save -o elastic-0.1.8.tar dockerhub.cisco.com/atom-docker/jalaja/elastic:0.1.8
+[root@dev-infra4-ifc1 jalaja]# ls -ltr
+total 956444
+-rw------- 1 root root 979395584 Mar  5 11:30 elastic-0.1.8.tar
+[root@dev-infra4-ifc1 jalaja]# gzip elastic-0.1.8.tar
+[root@dev-infra4-ifc1 jalaja]# ls -ltr
+total 375372
+-rw------- 1 root root 384379607 Mar  5 11:30 elastic-0.1.8.tar.gz
+[root@dev-infra4-ifc1 jalaja]# curl -u atom-docker-deployer:4w08j34pivprn8cn -X PUT https://dockerhub.cisco.com/atom-docker/apic-elastic/elastic-0.1.8.tar.gz --ftp-create-dirs -T elastic-0.1.8.tar.gz
+{
+  "repo" : "atom-docker-local",
+  "path" : "/apic-elastic/elastic-0.1.8.tar.gz",
+  "created" : "2018-02-22T18:54:55.122-08:00",
+  "createdBy" : "atom-docker-deployer",
+  "downloadUri" : "https://dockerhub.cisco.com/atom-docker-local/apic-elastic/elastic-0.1.8.tar.gz",
+  "mimeType" : "application/x-gzip",
+  "size" : "384379607",
+  "checksums" : {
+    "sha1" : "bfed7783db94cd2ffa5d4d467a9104244322f106",
+    "md5" : "b876f76efbb26da730d46c4c88cf52a7"
+  },
+  "originalChecksums" : {
+  },
+  "uri" : "https://dockerhub.cisco.com/atom-docker-local/apic-elastic/elastic-0.1.8.tar.gz"
+}[root@dev-infra4-ifc1 jalaja]#                  
