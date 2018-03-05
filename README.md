@@ -167,8 +167,10 @@ How to ammend to the existing commit and reflect in PR
 
 root@j7:~/atomix-hostcert/atomix/ocibuilds/es#            
 
-```
+````
 
+````
+Push Elastic image for APIC to pick 
 /local/dme/tools/kron - Makefile is present here
 
 [root@dev-infra4-ifc1 jalaja]# docker pull dockerhub.cisco.com/atom-docker/jalaja/elastic:0.1.8
@@ -207,3 +209,4 @@ total 375372
   },
   "uri" : "https://dockerhub.cisco.com/atom-docker-local/apic-elastic/elastic-0.1.8.tar.gz"
 }[root@dev-infra4-ifc1 jalaja]#                  
+````
