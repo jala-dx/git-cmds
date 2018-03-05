@@ -152,3 +152,20 @@ git reset --hard HEAD^
 }~/go/centos>
 ```
 
+
+````
+How to ammend to the existing commit and reflect in PR
+  233  git add elasticsearch.yml.apic sgadmin_demo.sh start_es.sh
+  234  git commit -s -m 'Pick hostcerts for TLS'
+  235  git log
+  236  git push origin master
+  237  vi start_es.sh ==== Modified start_es.sh
+  243  git add start_es.sh
+  244  git commit --amend
+  245  git status
+  246  git push origin +master
+
+root@j7:~/atomix-hostcert/atomix/ocibuilds/es#            
+
+```
+
