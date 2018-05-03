@@ -133,7 +133,7 @@ git reset --hard HEAD^
   ```
   ```
   how to upload something into our artifactory
-  ~/go/centos>curl -u atom-docker-deployer:4w08j34pivprn8cn -X PUT "http://engci-maven-master.cisco.com/artifactory/atom-release/elastic/elasticsearch-5.6.4.rpm" --ftp-create-dirs -T elasticsearch-5.6.4.rpm
+  ~/go/centos>curl -u atom-docker-deployer:pass -X PUT "http://engci-maven-master.cisco.com/artifactory/atom-release/elastic/elasticsearch-5.6.4.rpm" --ftp-create-dirs -T elasticsearch-5.6.4.rpm
 {
   "repo" : "atom-release",
   "path" : "/elastic/elasticsearch-5.6.4.rpm",
