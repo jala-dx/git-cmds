@@ -192,7 +192,7 @@ total 956444
 [root@dev-infra4-ifc1 jalaja]# ls -ltr
 total 375372
 -rw------- 1 root root 384379607 Mar  5 11:30 elastic-0.1.8.tar.gz
-[root@dev-infra4-ifc1 jalaja]# curl -u atom-docker-deployer:4w08j34pivprn8cn -X PUT https://dockerhub.cisco.com/atom-docker/apic-elastic/elastic-0.1.8.tar.gz --ftp-create-dirs -T elastic-0.1.8.tar.gz
+[root@dev-infra4-ifc1 jalaja]# curl -u atom-docker-deployer:pass -X PUT https://dockerhub.cisco.com/atom-docker/apic-elastic/elastic-0.1.8.tar.gz --ftp-create-dirs -T elastic-0.1.8.tar.gz
 {
   "repo" : "atom-docker-local",
   "path" : "/apic-elastic/elastic-0.1.8.tar.gz",
